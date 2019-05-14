@@ -13,14 +13,18 @@ public class BubbleSort {
 	 */
 	public int[] sort(int[] ary) {
 		
+	/**
+	 * aryLengthで配列の長さを取得
+	 * changeNumは配列の入れ替えをする回数を表します
+	 */
 	    int aryLength = ary.length;
 	    int changeNum = aryLength - 1;
 	      for(int i=changeNum; i>0; i--){
 		for(int j=0; j<i; j++){
-		  if(ary[i]>ary[i+1]){
-		    int temNum = ary[i+1];
-		    ary[i+1] = ary[i];
-		    ary[i] = temNum;
+		  if(ary[j]>ary[j+1]){
+		    int temNum = ary[j+1];
+		    ary[j+1] = ary[j];
+		    ary[j] = temNum;
 		  }
 		}
 	      }
