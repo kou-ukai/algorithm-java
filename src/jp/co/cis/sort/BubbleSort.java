@@ -12,8 +12,19 @@ public class BubbleSort {
 	 * @return
 	 */
 	public int[] sort(int[] ary) {
-		// TODO バブルソートで並び替える処理を実装してください。
-		return ary;
+		
+	    int aryLength = ary.length;
+	    int changeNum = aryLength - 1;
+	      for(int i=changeNum; i>0; i--){
+		for(int j=0; j<i; j++){
+		  if(ary[i]>ary[i+1]){
+		    int temNum = ary[i+1];
+		    ary[i+1] = ary[i];
+		    ary[i] = temNum;
+		  }
+		}
+	      }
+	    return ary;
 	}
 
 }
