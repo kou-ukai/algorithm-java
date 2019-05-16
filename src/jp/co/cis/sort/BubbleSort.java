@@ -13,14 +13,15 @@ public class BubbleSort {
 	 */
 	public int[] sort(int[] ary) {
 		// TODO バブルソートで並び替える処理を実装してください。
-		for(int i=1; i <= ary.length-1; i++) {			//小さい数字を決める
-			for(int j=0; j < ary.length-i; j++) {		//ary[j]とary[j+1]の大小比較
-				if(ary[j] < ary[j+1]) {
-				// ary[j]とary[j+1]の順番を入れ替えたい
-					int x = ary[j+1];
-					ary[j+1] = ary[j];
-					ary[j] = x;
+		for(int i=1; i<= ary.length-1; i++) {
+			for(int j=0; j < ary.length-i; j++) {
+				if(ary[j] > ary[j+1]) {
+					int y = ary[j];
+					ary[j] = ary[j+1];
+					ary[j+1] = y;
+				}
+			}
+		}
 		return ary;
 	}
-
 }
