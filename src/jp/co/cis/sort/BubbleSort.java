@@ -12,8 +12,23 @@ public class BubbleSort {
 	 * @return
 	 */
 	public int[] sort(int[] ary) {
-		// TODO バブルソートで並び替える処理を実装してください。
-		return ary;
+		
+	/**
+	 * aryLengthで配列の長さを取得
+	 * changeNumは配列の入れ替えをする回数を表します
+	 */
+	    int aryLength = ary.length;
+	    int changeNum = aryLength - 1;
+	      for(int i=changeNum; i>0; i--){
+		for(int j=0; j<i; j++){
+		  if(ary[j]>ary[j+1]){
+		    int temNum = ary[j+1];
+		    ary[j+1] = ary[j];
+		    ary[j] = temNum;
+		  }
+		}
+	      }
+	    return ary;
 	}
 
 }
