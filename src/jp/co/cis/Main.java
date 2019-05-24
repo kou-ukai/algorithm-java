@@ -1,6 +1,6 @@
 package jp.co.cis;
 
-import jp.co.cis.sort.SelectionSort;
+import jp.co.cis.sort.InsertionSort;
 
 public class Main {
 
@@ -22,7 +22,11 @@ public class Main {
 //		int[] out = bubbleSort.sort(in);
 		
 		// 選択ソート
-		SelectionSort sort = new SelectionSort();
+//		SelectionSort sort = new SelectionSort();
+//		int[] out = sort.sort(in);
+		
+		// 挿入ソート
+		InsertionSort sort = new InsertionSort();
 		int[] out = sort.sort(in);
 
 		// 変更後表示
