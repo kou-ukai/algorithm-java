@@ -13,8 +13,9 @@ public class InsertionSort {
 	 */
 	public int[] sort(int[] ary) {
 		// TODO 挿入ソートで並び替える処理を実装してください。
-		// 配列のインデックスをiとする
 		for(int i = 1; i < ary.length-1; i++){
+		// 比較する配列のインデックス
+			int tmp = i
 			int tmp = ary[i];
 			// ary[0]まで比較を繰り返す
 			for(int j = i; j > 0; j--){
