@@ -12,7 +12,24 @@ public class InsertionSort {
 	 * @return
 	 */
 	public int[] sort(int[] ary) {
-		// TODO 挿入ソートで並び替える処理を実装してください。
+		
+		final int max = ary.length;
+		
+		// 比較開始位置を前方から後方に向かって変更する
+		for(int i = 0; i < max; i++) {
+			
+			// 後方から前方に向かって比較し、値の小さい要素を前方に移動させる
+			for(int j = i; j > 0; j--) {
+				
+				// 後方(j)の値が前方(j - 1)の値よりも小さい場合、入れ替える
+				if(ary[j] < ary[j - 1]) {
+					int temp = ary[j];
+					ary[j] = ary[j - 1];
+					ary[j - 1] = temp;
+				}
+			}
+		}
+		
 		return ary;
 	}
 
