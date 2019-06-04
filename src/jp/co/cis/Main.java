@@ -1,5 +1,6 @@
 package jp.co.cis;
 
+import jp.co.cis.search.BinaryTree;
 import jp.co.cis.sort.HeapSort;
 
 public class Main {
@@ -34,8 +35,14 @@ public class Main {
 		int[] out = sort.sort(in);
 		
 		// 変更後表示
-		System.out.println("after---------");
+		System.out.println("after----------");
 		print(out);
+
+		BinaryTree tree = new BinaryTree();
+		int index = tree.search(out, in[0]);
+
+		System.out.println("探索結果--------");
+		System.out.println(in[0] + " は " + index + " 番目");
 	}
 
 	/**
