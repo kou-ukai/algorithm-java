@@ -1,6 +1,7 @@
 package jp.co.cis;
 
-import jp.co.cis.sort.SelectionSort;
+import jp.co.cis.search.BinaryTree;
+import jp.co.cis.sort.InsertionSort;
 
 public class Main {
 
@@ -17,17 +18,34 @@ public class Main {
 		System.out.println("before---------");
 		print(in);
 
+		//並び替えが行われる前のin[0]
+		int search = in[0];
+
 		// バブルソート
-//		BubbleSort bubbleSort = new BubbleSort();
-//		int[] out = bubbleSort.sort(in);
-		
+		//		BubbleSort bubbleSort = new BubbleSort();
+		//		int[] out = bubbleSort.sort(in);
+
 		// 選択ソート
-		SelectionSort sort = new SelectionSort();
+		//		SelectionSort sort = new SelectionSort();
+		//		int[] out = sort.sort(in);
+
+		//		 挿入ソート
+		InsertionSort sort = new InsertionSort();
 		int[] out = sort.sort(in);
 
+		//		ヒープソート
+		//		HeapSort sort = new HeapSort();
+		//		int[] out = sort.sort(in);
+
 		// 変更後表示
-		System.out.println("after---------");
+		System.out.println("after----------");
 		print(out);
+
+		BinaryTree tree = new BinaryTree();
+		int index = tree.search(out, search);
+
+		System.out.println("探索結果--------");
+		System.out.println(search + " は " + index + " 番目");
 	}
 
 	/**
@@ -37,7 +55,7 @@ public class Main {
 	private static int[] createArray() {
 		int in[] = new int[10];
 		final int max = in.length;
-		for(int i = 0; i < max; i++) {
+		for (int i = 0; i < max; i++) {
 			in[i] = (int) (Math.random() * 100);
 		}
 
@@ -49,7 +67,7 @@ public class Main {
 	 * @param ary
 	 */
 	private static void print(int[] ary) {
-		for(int val: ary) {
+		for (int val : ary) {
 			System.out.print(String.format("%2d", val) + " ");
 		}
 		System.out.println();
