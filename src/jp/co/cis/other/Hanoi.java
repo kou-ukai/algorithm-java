@@ -28,7 +28,7 @@ public class Hanoi {
 			// 一番下でないなら続ける
 
 			// (1)一番下以外を作業用の棒に移動させる
-			move(enban-1 , from , work , end);
+			move(enban-1 ,from,work,end);
 
 			// (2)一番下をGOALに移動させる
 			System.out.println(enban + "番の円盤を" + from + "から" + to + "に移動させる");
